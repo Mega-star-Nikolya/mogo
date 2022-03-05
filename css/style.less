@@ -1,0 +1,91 @@
+// compress: true , sourceMap: true
+/* false - в файле css все в нормальном рассширенном варианте
+true -в файле css все в сжатом состоянии 
+sourceMap: true  - показывает в каком плоке находиться классы*/
+@import "_vars";
+
+
+/*Задаем стили для всей страницы*/
+html {
+    /* Задаем высоту основного шрифта */
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    /*Дальше нужно посмотреть какой основной шрифт везде используется*/
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #fff;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+hr{
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+    border: 0;
+    background-color: #e5e5e5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.page {
+    overflow: hidden;
+}
+
+// blocks
+@import "blocks/_container.less";
+@import "blocks/_header.less";
+@import "blocks/_nav.less";
+@import "blocks/_nav-toggle.less";
+@import "blocks/_search.less";
+@import "blocks/_intro.less";
+@import "blocks/_slider.less";
+@import "blocks/_btn.less";
+@import "blocks/_section.less";
+@import "blocks/_card.less";
+@import "blocks/_statistics.less";
+@import "blocks/_services.less";
+@import "blocks/_feauture.less";
+@import "blocks/_wedoAccordion.less";
+@import "blocks/_reviews.less";
+@import "blocks/_SliderCarousel--btn.less";
+@import "blocks/_social.less";
+@import "blocks/_logos.less";
+@import "blocks/_works.less";
+@import "blocks/_clients.less";
+@import "blocks/_blog.less";
+@import "blocks/_map.less";
+@import "blocks/_footer.less";
+@import "blocks/_subscribe.less";
+@import "blocks/_blogs.less";
+@import "blocks/_instagram.less";
+@import "blocks/_copyright.less";
+
+/* В зеплин - техст имеет отступы 8рх, поэтому если между текстом к примеру
+24рх то прописать нужно 24-16=8рх */

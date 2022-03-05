@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--!DOCTYPE HTML - обозначает тип документа, а так же начало страницы-->
+<html lang="en">
+<!--html lang="ru"- обозначает язык контента страницы-->
+
+<head>
+    <!--здесь указывается основная служебная информация о документе (начало головы)-->
+    <meta charset="UTF-8">
+    <!--Правильная кодировка текста-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Юпорт-Этим метатегом мы говорим о том, что ширина должна ровняться ширине экрана, адаптивная верстка-->
+    <title>MoGo</title>
+    <!--Название-заголовок странички(Кодировка HTML-страницы)-->
+    <meta name="description" content="MoGo" />
+    <!--description (описание) сайта - заголовок сайта-->
+    <meta name="keywords" content="Mogo" />
+    <!--keywords (ключевые слова) по которым смогут в поисковике найти сайт-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--подключаем стили-->
+    <link rel="icon" href="images/icon/favicon.ico">
+    <!--Обязательно подключить иконку-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--Подключение шрифтов-->
+    <script src="https://kit.fontawesome.com/11f3843a4c.js" crossorigin="anonymous"></script>
+    <!-- Подключение иконок -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Библиотека jquery -->
+</head>
+<!--закрытие головы-->
+
+<body>
+    <!-- Header -->
+    <header class="header" id="jsHeader">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__logo" href="index.html">MoGo</a>
+                <nav class="header__nav" id="jsnav">
+                    <a class="nav__link active" href="#" data-scroll="#jsadout">about</a>
+                    <a class="nav__link" href="#" data-scroll="#jsservice">service</a>
+                    <a class="nav__link" href="#" data-scroll="#jswork">work</a>
+                    <a class="nav__link" href="#" data-scroll="#jsblog">blog</a>
+                    <a class="nav__link" href="#" data-scroll="#jscontact">contact</a>
+                    <a class="nav__link" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a class="nav__link" href="#">
+
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Intro -->
+    <div class="intro">
+        <div class="container">
+            <div class="inrto__inner">
+                <h2 class="intro__suptitle">Creative Template</h2>
+                <h1 class="intro__title">Welcome to MoGo</h1>
+                <a class="btn" href="#">Learn more</a>
+            </div>
+            <div class="slider">
+                <div class="slider__item active"><span>01</span> Intro</div>
+                <div class="slider__item"><span>02</span> Work</div>
+                <div class="slider__item"><span>03</span> About</div>
+                <div class="slider__item"><span>04</span> Contacts</div>
+            </div>
+        </div>
+    </div>
+    <!-- /Intro -->
+
+    <script src="js/app.js"></script>
+    <!-- подключение файла JS -->
+</body>
+
+</html>

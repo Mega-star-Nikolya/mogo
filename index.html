@@ -32,12 +32,13 @@
 
 <body>
     <!-- Header -->
-    <header class="header" id="jsHeader">
+    <header class="header" id="jsheader">
         <div class="container">
             <div class="header__inner">
-                <a class="header__logo" href="#" data-scroll="#jsIntro">MoGo</a>
+                <div class="header__logo" data-scroll="#jsintro">MoGo</div>
+
                 <nav class="nav" id="jsnav">
-                    <a class="nav__link active" href="#" data-scroll="#jsadout">about</a>
+                    <a class="nav__link" href="#" data-scroll="#jsadout">about</a>
                     <a class="nav__link" href="#" data-scroll="#jsservice">service</a>
                     <a class="nav__link" href="#" data-scroll="#jswork">work</a>
                     <a class="nav__link" href="#" data-scroll="#jsblog">blog</a>
@@ -55,7 +56,7 @@
                         </form>
                     </a>
                 </nav>
-                <button class="nav-toggle">
+                <button class="nav-toggle" id="jsnav_toggle" type="button">
                     <span class="nav-toggle__item">Menu</span>
                 </button>
             </div>
@@ -64,7 +65,7 @@
     <!-- /Header -->
     <div class="page">
         <!-- Intro -->
-        <div class="intro" id="jsIntro">
+        <div class="intro" id="jsintro">
             <div class="container">
                 <div class="inrto__inner">
                     <h2 class="intro__suptitle">Creative Template</h2>

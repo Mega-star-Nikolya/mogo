@@ -1,55 +1,69 @@
 $(function() {
-    /*При скроле страницы header(шапка) фиксируется при scroll(скроле)*/
-    let header = $("#jsHeader");
-    let intro = $("#jsIntro");
-    let introH = intro.innerHeight();
-    let scrollPos = $(window).scrollTop();
-    checkScroll(scrollPos, introH)
+    var header = $("#jsheader"),
+        introH = $("#jsintro").innerHeight(),
+        scrolloffset = $(window).scrollTop();
 
-    $(window).on("scroll resize", function() {
-        let introH = intro.innerHeight();
-        scrollPos = $(this).scrollTop();
-        checkScroll(scrollPos, introH)
-    })
 
-    function checkScroll(scrollPos, introH) {
-        if (scrollPos > introH) {
-            header.addClass("fixed");
+    /* Fixed Header */
+    checkScroll(scrolloffset);
+
+    $(window).on("scroll", function() {
+        scrolloffset = $(this).scrollTop();
+        checkScroll(scrolloffset);
+    });
+
+    function checkScroll(scrolloffset) {
+        if (scrolloffset >= introH) {
+            header.addClass("fixed")
         } else {
-            header.removeClass("fixed");
+            header.removeClass("fixed")
         }
     }
 
-    /*Плавный скрол при нажатие на шапку навигации и премещение по странице - Smooth scroll*/
+    /* Smooth scroll */
     $("[data-scroll]").on("click", function(event) {
         event.preventDefault();
-        let elementId = $(this).data('scroll');
-        let elementOffset = $(elementId).offset().top;
-        nav.removeClass("show");
+        var $this = $(this),
+            blockID = $(this).data('scroll'),
+            blockOffset = $(blockID).offset().top;
+
+        $("#jsnav a").removeClass("active");
+        $this.addClass("active");
+
         $("html, body").animate({
-            scrollTop: elementOffset - 80
-        }, 700)
+            scrollTop: blockOffset
+        }, 500)
     });
 
-    /*Burger- при нажание на меню открывается список*/
-    let nav = $("#jsnav")
-    let jsnavToggle = $("#jsnavToggle")
-    jsnavToggle.on("click", function(event) {
+    /* Menu nav toggle */
+    $("#jsnav_toggle").on("click", function(event) {
         event.preventDefault();
-        nav.toggleClass("show");
+
+        $(this).toggleClass("active");
+        $("#jsnav").toggleClass("active");
+    })
+
+
+    /* Collapse */
+
+    $("[data-collapse]").on("click", function(event) {
+        event.preventDefault();
+
+        var $this = $(this),
+            blockID = $(this).data('collapse');
+
+        $this.toggleClass("active")
     });
 
-    /*Слайдер https://kenwheeler.github.io/slick/ */
-    /*     let slider = $("#jsClientsSlader");
+    /* Slider */
 
-        slider.slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            arrows: false,
-            dots: true
-        }); */
+    $("[data-slider]").slick({
+        infinite: true,
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+
     const nav__linkSearch = document.querySelector('.nav__linkSearch');
     const body = document.querySelector('body');
     nav__linkSearch.addEventListener('click', function(e) {

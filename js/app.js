@@ -61,7 +61,7 @@ $(function() {
     https://kenwheeler.github.io/slick/*/
 
     $("[data-slider]").slick({
-        infinite: true, //,бесконечная прокрутка
+         infinite: true, //,бесконечная прокрутка
         fade: false,
         slidesToShow: 1, //показывать 1 слайд
         slidesToScroll: 1 //пролистывать 1 слайд
